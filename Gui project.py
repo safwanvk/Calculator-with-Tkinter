@@ -50,7 +50,7 @@ if __name__ == "__main__":
     btn3 = Button(window, text='3', fg='white', command=lambda: press(3), height=1, width=5, bg='grey')
     btn_min = Button(window, text='-', fg='white', command=lambda: press('-'), height=1, width=5, bg='grey')
     btn0 = Button(window, text='0', fg='white', command=lambda: press(0), height=1, width=5, bg='grey')
-    btn_des = Button(window, text='%', fg='white', command=lambda: press('.'), height=1, width=5, bg='grey')
+    btn_des = Button(window, text='.', fg='white', command=lambda: press('.'), height=1, width=5, bg='grey')
     btn_plus = Button(window, text='+', fg='white', command=lambda: press('+'), height=1, width=5, bg='grey')
     btn_res = Button(window, text='=', fg='white', command=result, height=1, width=5, bg='blue')
     btn_clr = Button(window, text='C', fg='white', command=clear, height=1, width=5, bg='grey')
@@ -71,6 +71,6 @@ if __name__ == "__main__":
     btn_des.grid(row=4, column=1)
     btn_plus.grid(row=4, column=2)
     btn_res.grid(row=4, column=3)
-    btn_clr.grid(row=1, column=3)
+    btn_clr.grid(row=1, column=4)
 
     window.mainloop()
