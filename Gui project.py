@@ -9,6 +9,17 @@ def press(num):
     display.set(expression)
 
 
+def result():
+    try:
+        global expression
+        total = str(eval(expression))
+        display.set(total)
+        expression = ''
+    except:
+        display.set('error')
+        expression = ''
+
+
 if __name__ == "__main__":
     window = Tk()
     window.geometry('500x500')
@@ -35,7 +46,7 @@ if __name__ == "__main__":
     btn0 = Button(window, text='0', command=lambda: press(0), height=1, width=7, bg='grey')
     btn_des = Button(window, text='%', command=lambda: press('.'), height=1, width=7, bg='grey')
     btn_plus = Button(window, text='+', command=lambda: press('+'), height=1, width=7, bg='grey')
-    btn_res = Button(window, text='=', command=lambda: press('='), height=1, width=7, bg='blue')
+    btn_res = Button(window, text='=', command=result, height=1, width=7, bg='blue')
     btn_clr = Button(window, text='C', command=lambda: press('C'), height=1, width=7, bg='grey')
 
     btn7.grid(row=1, column=0)
