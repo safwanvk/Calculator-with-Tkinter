@@ -13,11 +13,12 @@ def result():
     try:
         global expression
         total = str(eval(expression))
-        display.set(total)
+        display.set(expression + '=' + total)
         expression = ''
     except:
         display.set('error')
         expression = ''
+
 
 def clear():
     global expression
