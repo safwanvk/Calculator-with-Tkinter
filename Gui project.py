@@ -19,6 +19,11 @@ def result():
         display.set('error')
         expression = ''
 
+def clear():
+    global expression
+    display.set('')
+    expression = ''
+
 
 if __name__ == "__main__":
     window = Tk()
@@ -47,7 +52,7 @@ if __name__ == "__main__":
     btn_des = Button(window, text='%', command=lambda: press('.'), height=1, width=7, bg='grey')
     btn_plus = Button(window, text='+', command=lambda: press('+'), height=1, width=7, bg='grey')
     btn_res = Button(window, text='=', command=result, height=1, width=7, bg='blue')
-    btn_clr = Button(window, text='C', command=lambda: press('C'), height=1, width=7, bg='grey')
+    btn_clr = Button(window, text='C', command=clear, height=1, width=7, bg='grey')
 
     btn7.grid(row=1, column=0)
     btn8.grid(row=1, column=1)
